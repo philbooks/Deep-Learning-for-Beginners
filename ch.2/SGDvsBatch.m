@@ -23,23 +23,23 @@ for epoch = 1:1000           % train
   W1 = DeltaSGD(W1, X, D);
   W2 = DeltaBatch(W2, X, D);
 
-  e1 = 0;
-  e2 = 0;
+  es1 = 0;
+  es2 = 0;
   N  = 4;
   for k = 1:N
     x = X(k, :)';
     d = D(k);
     
-    v1 = W1*x;
-    y1 = Sigmoid(v1);
-    e1 = e1 + (d - y1)^2;
+    v1  = W1*x;
+    y1  = Sigmoid(v1);
+    es1 = es1 + (d - y1)^2;
     
-    v2 = W2*x;
-    y2 = Sigmoid(v2);
-    e2 = e2 + (d - y2)^2;
+    v2  = W2*x;
+    y2  = Sigmoid(v2);
+    es2 = es2 + (d - y2)^2;
   end
-  E1(epoch) = e1 / N;
-  E2(epoch) = e2 / N;
+  E1(epoch) = es1 / N;
+  E2(epoch) = es2 / N;
 end
 
 plot(E1, 'r')
