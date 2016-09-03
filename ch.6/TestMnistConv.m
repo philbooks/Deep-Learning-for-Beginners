@@ -32,7 +32,7 @@ D = Labels(8001:10000);
 acc = 0;
 N   = length(D);
 for k = 1:N
-  x = X(:, :, k);
+  x = X(:, :, k);                   % Input,           28x28
 
   y1 = Conv(x, W1);                 % Convolution,  20x20x20
   y2 = ReLU(y1);                    %
