@@ -25,7 +25,7 @@ for epoch = 1:1000           % train
 
   es1 = 0;
   es2 = 0;
-  N  = 4;
+  N   = 4;
   for k = 1:N
     x = X(k, :)';
     d = D(k);
@@ -46,6 +46,6 @@ plot(E1, 'r')
 hold on
 plot(E2, 'b:')
 xlabel('Epoch')
-ylabel('Average of Traing error')
+ylabel('Average of Training error')
 legend('SGD', 'Batch')
 
