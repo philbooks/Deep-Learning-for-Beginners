@@ -52,6 +52,6 @@ plot(E1, 'r')
 hold on
 plot(E2, 'b:')
 xlabel('Epoch')
-ylabel('Average of Traing error')
+ylabel('Average of Training error')
 legend('Cross Entropy', 'Sum of Squared Error')
 
