@@ -1,4 +1,4 @@
-function W = DeltaSGD(W, X, D)
+function W = DeltaXOR(W, X, D)
   alpha = 0.9;
   
   N = 4;  
