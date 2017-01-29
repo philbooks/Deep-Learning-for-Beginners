@@ -1,11 +1,16 @@
+"""
+  Originally written by Martin Thoma
+    https://martin-thoma.com/classify-mnist-with-pybrain/
+"""
+
 from struct import unpack
 import gzip
 from numpy import uint8, zeros, float32
 
 
-"""Read input images and labels(0-9).
-   Return it as list of tuples.
-"""
+# Read input images and labels(0-9).
+# Return it as list of tuples.
+#
 def LoadMnistData(imagefile, labelfile):
     # Open the images with gzip in read binary mode
     images = gzip.open(imagefile, 'rb')
