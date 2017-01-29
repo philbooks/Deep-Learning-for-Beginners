@@ -17,7 +17,7 @@ D = np.array([[0],
 E1 = np.zeros(1000)
 E2 = np.zeros(1000)
 
-W1 = np.random.uniform(-1, 1, (1, 3))
+W1 = 2*np.random.random((1, 3)) - 1
 W2 = np.array(W1)
 
 for epoch in range(1000):

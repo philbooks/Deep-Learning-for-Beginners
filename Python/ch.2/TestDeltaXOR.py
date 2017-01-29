@@ -14,7 +14,7 @@ def TestDeltaXOR():
                   [1],
                   [0]])
     
-    W = np.random.uniform(-1, 1, (1, 3))
+    W = 2*np.random.random((1, 3)) - 1
     
     for _epoch in range(40000):     #train
         W = DeltaXOR(W, X, D)

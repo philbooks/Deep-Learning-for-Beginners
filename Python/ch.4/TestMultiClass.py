@@ -44,8 +44,8 @@ def TestMultiClass():
                   [[0,0,0,0,1]]])
     
     
-    W1 = np.random.uniform(-1, 1, (50, 25))
-    W2 = np.random.uniform(-1, 1, ( 5, 50))
+    W1 = 2*np.random.random((50, 25)) - 1
+    W2 = 2*np.random.random(( 5, 50)) - 1
     
     for _epoch in range(10000):
         W1, W2 = MultiClass(W1, W2, X, D)

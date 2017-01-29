@@ -18,8 +18,8 @@ D = np.array([[0],
 E1 = np.zeros(1000)
 E2 = np.zeros(1000)
 
-W11 = np.random.uniform(-1, 1, (4, 3))
-W12 = np.random.uniform(-1, 1, (1, 4))
+W11 = 2*np.random.random((4, 3)) - 1
+W12 = 2*np.random.random((1, 4)) - 1
 W21 = np.array(W11)
 W22 = np.array(W12)
 

@@ -43,10 +43,10 @@ def TestDeepDropout():
                   [[0,0,0,1,0]],
                   [[0,0,0,0,1]]])
     
-    W1 = np.random.uniform(-1, 1, (20, 25))
-    W2 = np.random.uniform(-1, 1, (20, 20))
-    W3 = np.random.uniform(-1, 1, (20, 20))
-    W4 = np.random.uniform(-1, 1, ( 5, 20))
+    W1 = 2*np.random.random((20, 25)) - 1
+    W2 = 2*np.random.random((20, 20)) - 1
+    W3 = 2*np.random.random((20, 20)) - 1
+    W4 = 2*np.random.random(( 5, 20)) - 1
     
     
     for _epoch in range(20000):

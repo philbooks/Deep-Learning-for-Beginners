@@ -14,8 +14,8 @@ def TestBackpropCE():
                   [1],
                   [1]])
     
-    W1 = np.random.uniform(-1, 1, (4, 3))
-    W2 = np.random.uniform(-1, 1, (1, 4))
+    W1 = 2*np.random.random((4, 3)) - 1
+    W2 = 2*np.random.random((1, 4)) - 1
     
     for _epoch in range(10000):
         W1, W2 = BackpropCE(W1, W2, X, D)

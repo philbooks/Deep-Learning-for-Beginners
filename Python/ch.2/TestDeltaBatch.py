@@ -14,7 +14,7 @@ def TestDeltaBatch():
                   [1],
                   [1]])
         
-    W = np.random.uniform(-1, 1, (1, 3))
+    W = 2*np.random.random((1, 3)) - 1
         
     for _epoch in range(40000):
         W = DeltaBatch(W, X, D)
