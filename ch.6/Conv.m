@@ -12,7 +12,7 @@ y = zeros(yrow, ycol, numFilters);
 
 for k = 1:numFilters
   filter = W(:, :, k); 
-  filter = rot90(squeeze(filter), 2);
+  filter = rot90(filter, 2);
   y(:, :, k) = conv2(x, filter, 'valid');
 end
 
